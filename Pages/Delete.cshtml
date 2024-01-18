@@ -1,0 +1,22 @@
+﻿
+@page
+@model aplicatie.Pages.DeleteModel
+
+<h1>Ștergere Produs</h1>
+
+<p>Sunteți sigur că doriți să ștergeți produsul?</p>
+
+<form method="post">
+    <input type="hidden" asp-for="ProdusDeSters.ProdusId" />
+
+    <button type="button" class="btn btn-danger" onclick="confirmDelete()">Confirmare Ștergere</button>
+</form>
+
+<script>
+    function confirmDelete() {
+        if (confirm("Sunteți sigur că doriți să ștergeți produsul?")) {
+            // Dacă utilizatorul confirmă, trimite formularul
+            document.forms[0].submit();
+        }
+    }
+</script>

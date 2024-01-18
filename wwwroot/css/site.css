@@ -1,0 +1,22 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+
+body {
+    margin-bottom: 60px;
+    background-image: url('C:\\Users\\Dayana\\Desktop\\medii de programare\\imagine.jpg'); /* Adaug? calea c?tre imaginea de fundal */
+    background-size: cover; /* Asigur?-te c? imaginea acoper? întreaga suprafa?? */
+    background-position: center; /* Ajusteaz? pozi?ia imaginii */
+    color: black; /* Seteaz? culoarea textului la alb sau alt? culoare care se potrive?te cu imaginea */
+}

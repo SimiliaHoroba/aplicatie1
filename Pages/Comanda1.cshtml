@@ -1,0 +1,39 @@
+﻿@page
+@using aplicatie.Models
+@model aplicatie.Pages.Comanda1Model
+
+<h1>Comenzi</h1>
+
+<form method="post">
+    <label for="ComandaId">Comanda ID:</label>
+    <input type="number" name="ComandaId" />
+
+    <label for="UtilizatorId">Utilizator ID:</label>
+    <input type="number" name="UtilizatorId" />
+
+    <label for="DataComenzii">Data comenzii:</label>
+    <input type="datetime-local" name="DataComenzii" />
+
+    <button type="submit">Adaugă comanda</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ComandaId</th>
+            <th>UtilizatorId</th>
+            <th>DataComenzii</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Comanda comanda in Model.Comenzi1)
+        {
+            <tr>
+                <td>@comanda.ComandaId</td>
+                <td>@comanda.UtilizatorId</td>
+                <td>@comanda.DataComenzii</td>
+            </tr>
+        }
+    </tbody>
+</table>

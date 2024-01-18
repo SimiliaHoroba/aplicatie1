@@ -1,0 +1,20 @@
+﻿@page "{handler?}"
+@model aplicatie.Pages.EditModel
+
+<!-- Controale pentru editare -->
+<h1>Editare Produs</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="ProdusNou.Nume"></label>
+        <input asp-for="ProdusNou.Nume" class="form-control" />
+        <span asp-validation-for="ProdusNou.Nume" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ProdusNou.Pret"></label>
+        <input asp-for="ProdusNou.Pret" class="form-control" />
+        <span asp-validation-for="ProdusNou.Pret" class="text-danger"></span>
+    </div>
+    <!-- Alte controale pentru editare -->
+
+    <button type="submit" class="btn btn-primary">Salvare</button>
+</form>

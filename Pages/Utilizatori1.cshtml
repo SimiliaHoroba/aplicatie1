@@ -1,0 +1,34 @@
+﻿@page
+@using aplicatie.Models
+@model aplicatie.Pages.Utilizatori1Model
+
+<h1>Utilizatori</h1>
+
+<form method="post">
+    <input type="number" name="UtilizatorId" />
+    <input type="text" name="Nume" />
+    <input type="text" name="Email" />
+    <button type="submit">Add</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>UtilizatorId</th>
+            <th>Nume</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Utilizator utilizator in Model.Utilizatori1)
+        {
+            <tr>
+                <td>@utilizator.UtilizatorId</td>
+                <td>@utilizator.Nume</td>
+                <td>@utilizator.Email</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

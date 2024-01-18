@@ -1,0 +1,38 @@
+﻿@page
+@using aplicatie.Models
+@model aplicatie.Pages.Produse1Model
+
+<h1>Produse</h1>
+
+<form method="post">
+    <input type="number" name="ProdusNou.ProdusId" />
+    <input type="text" name="ProdusNou.Nume" />
+    <input type="text" name="ProdusNou.Pret" />
+    <button type="submit">Adăugare</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ProdusId</th>
+            <th>Nume</th>
+            <th>Pret</th>
+            <th>Acțiuni</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Produs produs in Model.Produse1)
+        {
+            <tr>
+                <td>@produs.ProdusId</td>
+                <td>@produs.Nume</td>
+                <td>@produs.Pret</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@produs.ProdusId">Editare</a> |
+                    <a asp-page="./Delete" asp-route-id="@produs.ProdusId">Ștergere</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

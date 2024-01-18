@@ -1,0 +1,44 @@
+﻿@page
+@using aplicatie.Models
+@model aplicatie.Pages.DetaliiComanda1Model
+
+<h1>Detalii Comenzi</h1>
+
+<form method="post">
+    <label for="DetaliiComandaId">Detalii Comanda ID:</label>
+    <input type="number" name="DetaliiComandaId" />
+
+    <label for="ComandaId">Comanda ID:</label>
+    <input type="number" name="ComandaId" />
+
+    <label for="ProdusId">Produs ID:</label>
+    <input type="number" name="ProdusId" />
+
+    <label for="Cantitate">Cantitate:</label>
+    <input type="number" name="Cantitate" />
+
+    <button type="submit">Adaugă Detaliu Comanda</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>DetaliiComandaId</th>
+            <th>ComandaId</th>
+            <th>ProdusId</th>
+            <th>Cantitate</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (DetaliiComanda detaliiComanda in Model.DetaliiComanda1)
+        {
+            <tr>
+                <td>@detaliiComanda.DetaliiComandaId</td>
+                <td>@detaliiComanda.ComandaId</td>
+                <td>@detaliiComanda.ProdusId</td>
+                <td>@detaliiComanda.Cantitate</td>
+            </tr>
+        }
+    </tbody>
+</table>
